@@ -24,14 +24,18 @@ if [[ ! -z ${SLEEPING_HOUR//[0-9]/} ]]; then
     exit
 fi
 
+CURRENT_NODES=`getNodesCount`
+CURRENT_STATUS=`getStatus`
+
 
 # Print Configuration 
-echo '******************** Configuration **********************'
+echo '************************ START ***************************'
 echo '* START_TIME : ' $(date +"%Y-%m-%dT%H:%M:%S")
 echo '* ELASTICSEARCH_HOST : '${ELASTICSEARCH_HOST}
 echo '* ELASTICSEARCH_PORT : '${ELASTICSEARCH_PORT}
 echo '* ELASTICSEARCH_PATH : '${ELASTICSEARCH_PATH}
-echo '* CURRENT_NODE_COUNT : '
+echo '* CURRENT_NODE_COUNT : '${CURRENT_NODES}
+echo '* CURRENT_STATUS : '${CURRENT_STATUS}
 echo '* SLEEPING_HOUR : '${SLEEPING_HOUR}hr
 echo '**********************************************************'
 echo ''

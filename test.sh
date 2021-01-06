@@ -1,23 +1,31 @@
-# ELASTICSEARCH_PATH="/Users/may-han/Documents/ELK/elasticsearch\elasticsearch-6.8.5"
+#!/bin/sh
+
+echo I am in test
 
 
-
-  
-# cd $ELASTICSEARCH_PATH
-# if [ $? -eq 0 ];then 
-
-#     PWD=$(pwd)
-#     echo ${PWD}
-# else  
-#     echo 'ERROR'
+# if [[ ! $TEST =~ "true" ]]; then 
+#     echo its false!!
 #     exit
-# fi 
-# echo 'DONE'
+# fi
+CLUSTER='{"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":2,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}'
+ALLOCATION='{"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}'
+# if [[ $ALLOCATION == '{"persistent":{},"transient":{}}' ]]; then 
+#     echo same
+# fi
 
-ERROR_LOG_FILE=/Users/may-han/study/elastic_rolling_restart/logs/error_test.log 
-OUT_LOG_FILE=/Users/may-han/study/elastic_rolling_restart/logs/out_test.log
+ARR=$(echo $CLUSTER | tr "," "\n" )
 
-source .scripts/common/logger.sh
-PID=312324
-logger "ERROR" "test" "May is the great"
-logger "INFO" "test2" "Elasticsearch process [${PID}] is successfully killed"
+SHARDS_NUM=$(echo $ARR | awk '{print $4}' | tr ":" "\n")
+echo $SHARDS_NUM | awk '{print $2}'
+# for ar in $ARR
+# do 
+#     echo $ar
+#done
+
+SLEEPING_HOUR=asdgd
+if [[ -z ${SLEEPING_HOUR//[0-9]/} ]]; then
+   echo $SLEEPING_HOUR is number 
+   exit
+fi
+
+echo $SLEEPING_HOUR it not number
