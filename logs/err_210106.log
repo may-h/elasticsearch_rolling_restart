@@ -1,3 +1,0 @@
-[2021-01-06T14:59:06][ERROR][Config Validation] "ELASTICSEARCH_PATH" is not validated
-[2021-01-06T14:59:06][ERROR][Config Validation] Please check "ELASTICSEARCH_PATH" in "./config/env.sh" file
-[2021-01-06T14:59:06][EXIT][Config Validation] Process stopped...
