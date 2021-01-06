@@ -11,7 +11,6 @@ OUT_LOG_FILE=${APP_ROOT}/logs/out_$(date +"%y%m%d").log
 # Include environment
 source $APP_ROOT/config/env.sh
 
-
 # Step 0 - Validate & Print Configuration 
 source ${SCRIPT_PATH}/0_validate_config.sh >> ${OUT_LOG_FILE}
 
