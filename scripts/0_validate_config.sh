@@ -8,6 +8,17 @@ if [[ -z ${SLEEPING_HOUR} ]] || [[ -z ${ELASTICSEARCH_HOST} ]] || [[ -z ${ELASTI
     exit
 fi
 
+cd $ELASTICSEARCH_PATH
+if [ $? -eq 0 ];then 
+    #SUCCESS
+else  
+    #FAIL
+    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Config Validation] \"ELASTICSEARCH_PATH\" is not validated  | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
+    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Config Validation] Please check \"ELASTICSEARCH_PATH\" in \"./config/env.sh\" file   | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
+    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][EXIT][Config Validation] Process stopped... | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
+    exit
+fi 
+
 if [[ ! -z ${SLEEPING_HOUR//[0-9]/} ]]; then 
     $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Config Validation] \"SLEEPING_HOUR\" in \"config/env.sh\" must to be number  | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
     $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Config Validation] Please set up \"SLEEPING_HOUR\" and retry   | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
