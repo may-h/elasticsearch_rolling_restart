@@ -1,0 +1,60 @@
+************************ START ***************************
+* START_TIME :  2021-01-07T11:03:43
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 
+* CLUSTER_STATUS : 
+* SLEEPING_HOUR : 8hr
+**********************************************************
+
+[2021-01-07T11:03:43][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-07T11:03:43][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:03:43][ERROR][Elasticsearch Connection] curl result [], pid result []
+[2021-01-07T11:03:43][ERROR][Exit] Elasticsearch has no connection.. Process stopped...
+
+************************ START ***************************
+* START_TIME :  2021-01-07T11:05:39
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 
+* CLUSTER_STATUS : 
+* SLEEPING_HOUR : 8hr
+**********************************************************
+
+[2021-01-07T11:05:39][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-07T11:05:39][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:05:39][ERROR][Elasticsearch Connection] curl result [], pid result []
+[2021-01-07T11:05:40][EXIT][Elasticsearch Connection] Elasticsearch has no connection.. Process stopped...
+************************ START ***************************
+* START_TIME :  2021-01-07T11:10:50
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 
+* CLUSTER_STATUS : 
+* SLEEPING_HOUR : 8hr
+**********************************************************
+
+[2021-01-07T11:10:50][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-07T11:10:50][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:10:50][ERROR][Elasticsearch Connection] curl result [], pid result [30733]
+[2021-01-07T11:10:50][EXIT][Elasticsearch Connection] Elasticsearch has no connection.. Process stopped...
+************************ START ***************************
+* START_TIME :  2021-01-07T11:10:55
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 1
+* CLUSTER_STATUS : "yellow"
+* SLEEPING_HOUR : 8hr
+**********************************************************
+
+[2021-01-07T11:10:55][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-07T11:10:55][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-07T11:10:55][INFO][Elasticsearch Status] { "name" : "mQ0G79W", "cluster_name" : "elasticsearch", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-07T11:10:55][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-07T11:10:55][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-07T11:10:56][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-07T11:10:56][INFO][Allocation Setting] sleeping for 30s...

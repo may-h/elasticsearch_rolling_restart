@@ -1,0 +1,9 @@
+[2021-01-07T11:03:43][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:03:43][ERROR][Elasticsearch Connection] curl result [], pid result []
+[2021-01-07T11:03:43][ERROR][Exit] Elasticsearch has no connection.. Process stopped...
+[2021-01-07T11:05:39][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:05:39][ERROR][Elasticsearch Connection] curl result [], pid result []
+[2021-01-07T11:05:40][EXIT][Elasticsearch Connection] Elasticsearch has no connection.. Process stopped...
+[2021-01-07T11:10:50][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-07T11:10:50][ERROR][Elasticsearch Connection] curl result [], pid result [30733]
+[2021-01-07T11:10:50][EXIT][Elasticsearch Connection] Elasticsearch has no connection.. Process stopped...
