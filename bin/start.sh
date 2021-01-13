@@ -23,13 +23,13 @@ source ${SCRIPT_PATH}/1_els_connection.sh >> ${OUT_LOG_FILE}
 source ${SCRIPT_PATH}/2_disable_allocation.sh >> ${OUT_LOG_FILE}
 
 # Step 3 - Elasticsearch PID CHECK & KILL 
-#source ${SCRIPT_PATH}/3_pid_kill.sh >> ${OUT_LOG_FILE}
+source ${SCRIPT_PATH}/3_pid_kill.sh >> ${OUT_LOG_FILE}
 
 # Step 4 - Sleeping Before Restart 
 source ${SCRIPT_PATH}/4_sleeping.sh >> ${OUT_LOG_FILE}
 
 # Step 5 - Restart Elasticsearch
-#source ${SCRIPT_PATH}/5_restart_elasticsearch.sh >> ${OUT_LOG_FILE}
+source ${SCRIPT_PATH}/5_restart_elasticsearch.sh >> ${OUT_LOG_FILE}
 
 # Step 6 - Cluster Check
 source ${SCRIPT_PATH}/6_cluster_check.sh >> ${OUT_LOG_FILE}
