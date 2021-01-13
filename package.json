@@ -1,0 +1,16 @@
+{
+  "name": "elastic_rolling_restart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

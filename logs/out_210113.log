@@ -1,0 +1,15 @@
+************************ START ***************************
+* START_TIME :  2021-01-13T20:43:24
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.5.4
+* CURRENT_NODE_NUM : 
+* CLUSTER_STATUS : 
+* ELASTICSEARCH_PID : 
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-13T20:43:24][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-13T20:43:24][ERROR][Elasticsearch Connection] Failed to connect to 127.0.0.1 port 9200: Connection refused
+[2021-01-13T20:43:24][ERROR][Elasticsearch Connection] curl result [], pid result []
+[2021-01-13T20:43:24][EXIT][Elasticsearch Connection] Elasticsearch has no connection.. Process stopped...
