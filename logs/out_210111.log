@@ -1,0 +1,235 @@
+************************ START ***************************
+* START_TIME :  2021-01-11T16:52:33
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 1
+* CLUSTER_STATUS : "yellow"
+* ELASTICSEARCH_PID : 20029
+* SLEEPING_HOUR : 8hr
+**********************************************************
+
+[2021-01-11T16:52:33][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T16:52:33][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T16:52:33][INFO][Elasticsearch Status] { "name" : "mQ0G79W", "cluster_name" : "elasticsearch", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T16:52:33][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{},"transient":{}}
+[2021-01-11T16:52:33][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T16:52:33][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T16:52:33][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T16:52:43][INFO][Elasticsearch PID] Elasticsearch process ID check... PID is [20029]
+[2021-01-11T16:52:43][INFO][Elasticsearch PID] Elasticsearch will be killed.
+[2021-01-11T16:52:43][INFO][Elasticsearch PID] Elasticsearch process [20029] is successfully killed
+[2021-01-11T16:52:43][INFO][SLEEPING] Sleeping for 8hrs before restart elasticsearch...
+[2021-01-11T16:52:51][INFO][Elasticsearch Restart] Starting elasticsearch...
+warning: Falling back to java on path. This behavior is deprecated. Specify JAVA_HOME
+[2021-01-11T16:52:52][INFO][Elasticsearch Restart] Waiting for 30s until elasticsearch is on process
+[2021-01-11T16:53:22][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T16:53:22][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T16:53:22][INFO][Elasticsearch Status] { "name" : "mQ0G79W", "cluster_name" : "elasticsearch", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T16:53:22][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T16:53:22][DEBUG][CLUSTER CHECK] Expect cluster status is ["green"] but ["yellow"], please check elasticsearch cluster
+[2021-01-11T16:53:22][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T16:53:22][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T16:53:22][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T16:53:52][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T16:53:52
+* CURRENT_NODE_NUM : 1
+* CLUSTER_STATUS : "yellow"
+* ELASTICSEARCH_PID : 54952
+********************************************************
+
+************************ START ***************************
+* START_TIME :  2021-01-11T17:15:09
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 56848
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-11T17:15:09][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:15:09][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:15:09][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:15:09][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{},"transient":{}}
+[2021-01-11T17:15:09][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T17:15:09][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:15:09][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T17:15:19][INFO][Elasticsearch PID] Elasticsearch process ID check... PID is [56848]
+[2021-01-11T17:15:19][INFO][Elasticsearch PID] Elasticsearch will be killed.
+[2021-01-11T17:15:19][INFO][Elasticsearch PID] Elasticsearch process [56848] is successfully killed
+[2021-01-11T17:15:19][INFO][SLEEPING] Sleeping for 1hrs before restart elasticsearch...
+[2021-01-11T17:15:20][INFO][Elasticsearch Restart] Starting elasticsearch...
+warning: Falling back to java on path. This behavior is deprecated. Specify JAVA_HOME
+[2021-01-11T17:15:21][INFO][Elasticsearch Restart] Waiting for 30s until elasticsearch is on process
+[2021-01-11T17:15:51][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:15:51][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:15:51][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:15:51][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:15:51][DEBUG][CLUSTER CHECK] Expect cluster status is ["green"] but ["yellow"], please check elasticsearch cluster
+[2021-01-11T17:15:51][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T17:15:51][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T17:15:51][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T17:16:21][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T17:16:21
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 57469
+********************************************************
+
+************************ START ***************************
+* START_TIME :  2021-01-11T17:27:58
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 57469
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-11T17:27:58][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:27:58][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:27:58][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:27:58][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{},"transient":{}}
+[2021-01-11T17:27:58][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T17:27:58][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:27:58][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T17:28:09][INFO][Elasticsearch PID] Elasticsearch process ID check... PID is [57469]
+[2021-01-11T17:28:09][INFO][Elasticsearch PID] Elasticsearch will be killed.
+[2021-01-11T17:28:09][INFO][Elasticsearch PID] Elasticsearch process [57469] is successfully killed
+[2021-01-11T17:28:09][INFO][SLEEPING] Sleeping for 1hrs before restart elasticsearch...
+[2021-01-11T17:28:10][INFO][Elasticsearch Restart] Starting elasticsearch...
+warning: Falling back to java on path. This behavior is deprecated. Specify JAVA_HOME
+[2021-01-11T17:28:10][INFO][Elasticsearch Restart] Waiting for 30s until elasticsearch is on process
+[2021-01-11T17:28:40][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:28:40][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:28:40][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:28:40][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:28:40][DEBUG][CLUSTER CHECK] Expect cluster status is ["green"] but ["yellow"], please check elasticsearch cluster
+[2021-01-11T17:28:40][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T17:28:40][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T17:28:40][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T17:29:11][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T17:29:11
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 58325
+********************************************************
+
+************************ START ***************************
+* START_TIME :  2021-01-11T17:29:56
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 58325
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-11T17:29:56][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:29:56][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:29:56][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:29:56][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{},"transient":{}}
+[2021-01-11T17:29:56][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T17:29:57][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:29:57][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T17:30:07][INFO][Elasticsearch PID] Elasticsearch process ID check... PID is [58325]
+[2021-01-11T17:30:07][INFO][Elasticsearch PID] Elasticsearch will be killed.
+[2021-01-11T17:30:07][INFO][Elasticsearch PID] Elasticsearch process [58325] is successfully killed
+[2021-01-11T17:30:07][INFO][SLEEPING] Sleeping for 1hrs before restart elasticsearch...
+[2021-01-11T17:30:08][INFO][Elasticsearch Restart] Starting elasticsearch...
+warning: Falling back to java on path. This behavior is deprecated. Specify JAVA_HOME
+[2021-01-11T17:30:08][INFO][Elasticsearch Restart] Waiting for 30s until elasticsearch is on process
+[2021-01-11T17:30:38][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:30:38][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:30:38][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:30:38][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:30:39][DEBUG][CLUSTER CHECK] Expect cluster status is ["green"] but ["yellow"], please check elasticsearch cluster
+[2021-01-11T17:30:39][DEBUG][CLUSTER CHECK] Expect 'num_of_noes' is [2] but [1].
+[2021-01-11T17:30:39][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T17:30:39][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T17:30:39][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T17:31:09][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T17:31:09
+* CURRENT_NODE_NUM : 1
+* CLUSTER_STATUS : "yellow"
+* ELASTICSEARCH_PID : 58694
+********************************************************
+
+************************ START ***************************
+* START_TIME :  2021-01-11T17:57:04
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "yellow"
+* ELASTICSEARCH_PID : 60104
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-11T17:57:04][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:57:04][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:57:04][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:57:04][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:57:04][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T17:57:04][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:57:04][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T17:57:14][INFO][Elasticsearch PID] Elasticsearch process ID check... PID is [60104]
+[2021-01-11T17:57:14][INFO][Elasticsearch PID] Elasticsearch will be killed.
+[2021-01-11T17:57:14][INFO][Elasticsearch PID] Elasticsearch process [60104] is successfully killed
+[2021-01-11T17:57:14][INFO][Sleeping] Sleeping for 1hrs before restart elasticsearch...
+[2021-01-11T17:57:15][INFO][Elasticsearch Restart] Starting elasticsearch...
+[2021-01-11T17:57:16][INFO][Elasticsearch Restart] Waiting for 30s until elasticsearch is on process
+[2021-01-11T17:57:46][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T17:57:46][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T17:57:46][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T17:57:46][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T17:57:46][DEBUG][Cluster Check] Expect cluster status is ["green"] but ["yellow"], please check elasticsearch cluster
+[2021-01-11T17:57:46][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T17:57:46][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T17:57:46][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T17:58:16][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T17:58:16
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 60280
+********************************************************
+
+************************ START ***************************
+* START_TIME :  2021-01-11T19:17:03
+* ELASTICSEARCH_HOST : 127.0.0.1
+* ELASTICSEARCH_PORT : 9200
+* ELASTICSEARCH_PATH : /Users/may-han/Documents/ELK/elasticsearch/elasticsearch-6.8.5
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 60280
+* SLEEPING_HOUR : 1hr
+**********************************************************
+
+[2021-01-11T19:17:03][INFO][Elasticsearch Connection] Checking elasticsearch connection...
+[2021-01-11T19:17:03][INFO][Elasticsearch Connection] Elasticsearch is on connection to 127.0.0.1 port 9200
+[2021-01-11T19:17:03][INFO][Elasticsearch Status] { "name" : "node-1", "cluster_name" : "test-cluster", "cluster_uuid" : "jGfNfABEQD6xRY8gkJMq9g", "version" : { "number" : "6.8.5", "build_flavor" : "default", "build_type" : "tar", "build_hash" : "78990e9", "build_date" : "2019-11-13T20:04:24.100411Z", "build_snapshot" : false, "lucene_version" : "7.7.2", "minimum_wire_compatibility_version" : "5.6.0", "minimum_index_compatibility_version" : "5.0.0" }, "tagline" : "You Know, for Search" }
+[2021-01-11T19:17:04][INFO][Elasticsearch Status] _cluster/settings : {"persistent":{},"transient":{}}
+[2021-01-11T19:17:04][INFO][Allocation Setting] Disable shard allocation..
+[2021-01-11T19:17:04][INFO][Allocation Setting] Disable shard allocation success : {"acknowledged":true,"persistent":{"cluster":{"routing":{"allocation":{"enable":"primaries"}}}},"transient":{}}
+[2021-01-11T19:17:04][INFO][Allocation Setting] sleeping for 30s..
+[2021-01-11T19:17:14][INFO][SLEEPING] Sleeping for 1hrs before restart elasticsearch...
+[2021-01-11T19:17:15][INFO][Allocation Setting] Enable shard allocation..
+[2021-01-11T19:17:15][INFO][Allocation Setting] Enable shard allocation success
+[2021-01-11T19:17:15][INFO][Allocation Setting] Let me sleep for 30s..
+[2021-01-11T19:17:45][INFO][Allocation Setting] _cluster/settings : {"persistent":{},"transient":{}}
+************************* END **************************
+* END_TIME :  2021-01-11T19:17:45
+* CURRENT_NODE_NUM : 2
+* CLUSTER_STATUS : "green"
+* ELASTICSEARCH_PID : 60280
+********************************************************
+

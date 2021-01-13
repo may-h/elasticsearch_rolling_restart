@@ -1,3 +1,12 @@
+# Elasticsearch connection check  
+function connectionCheck() 
+{
+   CONNECTION_RESULT=$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}); 
+
+   echo $CONNECTION_RESULT
+}
+
+# Get number_of_nodes of cluster 
 function getNodesCount() 
 {
     CLUSTER=$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}/_cluster/health)
@@ -8,6 +17,7 @@ function getNodesCount()
     echo $CURRENT_NODE_COUNT
 }
 
+# Get cluster status 
 function getStatus() 
 {
     CLUSTER=$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}/_cluster/health)
@@ -18,7 +28,7 @@ function getStatus()
     echo $STATUS
 }
 
-
+# Get elasticsearch process pid 
 function getPid()
 {
     PID_RESULT=$(ps -ef | grep elasticsearch | grep 'Xms'|  xargs | awk '{print $2}') 
@@ -26,6 +36,7 @@ function getPid()
     echo $PID_RESULT
 }
 
+# Log elasticsearch status 
 function logElasticStatus() 
 {
     logger "INFO" "Elasticsearch Status" "$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT})"

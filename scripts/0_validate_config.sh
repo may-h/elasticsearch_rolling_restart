@@ -25,8 +25,9 @@ if [[ ! -z ${SLEEPING_HOUR//[0-9]/} ]]; then
 fi
 
 # Get Cluster Info (number_of_nodes, status)
-CURRENT_NODES=`getNodesCount`
+START_NODES_NUM=`getNodesCount`
 CLUSTER_STATUS=`getStatus`
+ELASTICSEARCH_PID=`getPid`
 
 
 # Print Configuration 
@@ -35,8 +36,9 @@ echo '* START_TIME : ' $(date +"%Y-%m-%dT%H:%M:%S")
 echo '* ELASTICSEARCH_HOST : '${ELASTICSEARCH_HOST}
 echo '* ELASTICSEARCH_PORT : '${ELASTICSEARCH_PORT}
 echo '* ELASTICSEARCH_PATH : '${ELASTICSEARCH_PATH}
-echo '* CURRENT_NODE_NUM : '${CURRENT_NODES}
+echo '* CURRENT_NODE_NUM : '${START_NODES_NUM}
 echo '* CLUSTER_STATUS : '${CLUSTER_STATUS}
+echo '* ELASTICSEARCH_PID : '${ELASTICSEARCH_PID}
 echo '* SLEEPING_HOUR : '${SLEEPING_HOUR}hr
 echo '**********************************************************'
 echo ''

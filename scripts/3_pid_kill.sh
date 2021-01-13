@@ -1,46 +1,51 @@
 #!/bin/bash
 
 # Step3 - Elasticsearch PID CHECK & KILL 
+LOG_STEP="Elasticsearch PID"
+PID=`getPid`
  
-PID=$(ps -ef | grep elasticsearch | grep 'Xms'|  xargs | awk '{print $2}')
-
-# 3.1 PID CHECK ERROR (if PID is empty) 
+# 3.1 PID CHECK 
 if [[ -z ${PID} ]]; then 
-      $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] PID not found.. [${PID}] | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-      $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] Please check elasticsearch process by below command | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-      $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] 'ps -ef | grep elasticsearch' | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-      $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][EXIT] Process stopped... | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-      exit
-fi
-
-# 3.2 PID CHECK SUCCESS 
-echo [$(date +"%Y-%m-%dT%H:%M:%S")][INFO][Elasticsearch PID] Elasticsearch process ID check... The PID is [${PID}]
-echo [$(date +"%Y-%m-%dT%H:%M:%S")][INFO][Elasticsearch PID] Elasticsearch will be killed.. 
-
-
-# PID KILL 
-KILL_RESULT=$(kill -9 ${PID})
-
-# 3.3 PID KILL ERROR
-if [[ ! -z ${KILL_RESULT} ]]; then 
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] Killing elsaticsearch PID [${PID}] went something wrong.. | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] Killing result is [${KILL_RESULT}], which is supposed to be empty | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][EXIT] Process stopped... | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})      exit
+    logger "ERROR" "$LOG_STEP" "Expect PID is not empty but it's empty.."
+    logger "ERROR" "$LOG_STEP" "Please check elasticsearch process by below command "
+    logger "ERROR" "$LOG_STEP" "'ps -ef | grep elasticsearch'"
+    logger "EXIT" "$LOG_STEP" "Process stopped..."
     exit
 fi
 
-# PROCESS DOUBLE CHECK 
-CONNECTION_RESULT=$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}); 
+logger "INFO" "$LOG_STEP" "Elasticsearch process ID check... PID is [${PID}]"
+logger "INFO" "$LOG_STEP" "Elasticsearch will be killed."
 
+# 3.2 PID KILL 
+KILL_RESULT=$(kill -9 ${PID})
+
+# PID KILL ERROR - Retry
+if [[ ! -z ${KILL_RESULT} ]]; then 
+    logger "ERROR" "$LOG_STEP" "Got something wrong while killing the PID [${PID}]"
+    logger "ERROR" "$LOG_STEP" "Killing result is [${KILL_RESULT}], which is supposed to be empty."
+    logger "ERROR" "$LOG_STEP" "Retry.."
+
+    PID=`getPid`
+    KILL_RESULT=$(kill -9 ${PID})
+
+    if [[ ! -z ${KILL_RESULT} ]]; then 
+        logger "ERROR" "$LOG_STEP" "Can not kill [${PID}] PID process. Please check."
+        logger "EXIT" "$LOG_STEP" "Process stopped..."
+        exit
+    fi
+fi
+
+
+
+# PID KILL SUCCESS (if KILL_RESULT="", CONNECTION_RESULT="")
+CONNECTION_RESULT=`connectionCheck`
 if [[ -z ${CONNECTION_RESULT} ]] && [[ -z ${KILL_RESULT} ]]; then
-    # 3.4 PID KILL SUCCESS (KILL_RESULT="", CONNECTION_RESULT="")
-    echo [$(date +"%Y-%m-%dT%H:%M:%S")][INFO][Elasticsearch PID] Elasticsearch process [${PID}] is successfully killed
-    echo [$(date +"%Y-%m-%dT%H:%M:%S")][INFO][Elasticsearch PID] Check process ps -ef [$(ps -ef | grep elasticsearch | grep 'Xms'|  xargs | awk '{print $2}')]... 
+    logger "INFO" "$LOG_STEP" "Elasticsearch process [${PID}] is successfully killed"
 else  
     # ERROR 
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] Elassticsearch process seems to be still running | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][ERROR][Elasticsearch PID] Killing result is [${KILL_RESULT}], curl result is [${CONNECTION_RESULT}] | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})
-    $(echo [$(date +"%Y-%m-%dT%H:%M:%S")][EXIT] Process stopped... | tee -a ${ERROR_LOG_FILE} ${OUT_LOG_FILE})  
+    logger "ERROR" "$LOG_STEP" "Elassticsearch process seems to be still running"
+    logger "ERROR" "$LOG_STEP" "Killing result is [${KILL_RESULT}], curl result is [${CONNECTION_RESULT}]"
+    logger "EXIT" "$LOG_STEP" "Process stopped..."
     exit
 fi 
 

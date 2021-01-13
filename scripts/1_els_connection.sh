@@ -4,7 +4,7 @@ LOG_STEP="Elasticsearch Connection"
 # Step1 - Check Elasticsearch Connection. 
 logger "INFO" "$LOG_STEP" "Checking elasticsearch connection..."
 
-CONNECTION_RESULT=$(curl ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}); 
+CONNECTION_RESULT=`connectionCheck` 
 PID=`getPid`
 
 # 1.1 - ERROR
