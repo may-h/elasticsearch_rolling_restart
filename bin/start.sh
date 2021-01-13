@@ -39,3 +39,7 @@ source ${SCRIPT_PATH}/7_enable_allocation.sh >> ${OUT_LOG_FILE}
 
 # Process End 
 source ${SCRIPT_PATH}/8_print_end.sh >> ${OUT_LOG_FILE}
+
+if [[ $SEND_EMAIL_MODE == "Y" ]]; then 
+    $(node ${SCRIPT_PATH}/email/send.js ${USER} ${PASSWORD} ${ERROR_LOG_FILE} ${OUT_LOG_FILE} ${EMAIL_TO});
+fi 
